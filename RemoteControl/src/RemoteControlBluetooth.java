@@ -4,8 +4,7 @@ import javax.microedition.io.*;
 
 public class RemoteControlBluetooth implements Runnable {
 
-    private final UUID uuid = new UUID(                              //the uid of the service, it has to be unique,
-			"27012f0c68af4fbf8dbe6bbaf7aa432a", false); //it can be generated randomly
+    private final UUID uuid = new UUID(0x1101); //it can be generated randomly
     private final String name = "Echo Server";                       //the name of the service
     private final String url  =  "btspp://localhost:" + uuid         //the service url
                                 + ";name=" + name
