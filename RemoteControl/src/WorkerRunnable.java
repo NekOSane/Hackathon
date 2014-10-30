@@ -61,7 +61,11 @@ public class WorkerRunnable implements Runnable {
 
             client.disconnect();
         } catch (IOException e) {
-            e.printStackTrace();
+        	try {
+        		client.disconnect();
+        	} catch (IOException ex) {
+        		System.out.println("Cannot disconnect client. " + ex.getMessage());
+        	}
         }
     }
 }
