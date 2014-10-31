@@ -37,7 +37,7 @@ public class RemoteControlWifi implements Runnable{
         while(! isStopped()){
             try {
             	Socket clientSocket = this.serverSocket.accept();
-                System.out.println("Client connected");
+                System.out.println("Client connected through Wifi");
 
                 if (!this.client.isConnected()) {
                 	this.client.bind(clientSocket);

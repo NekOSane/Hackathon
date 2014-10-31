@@ -29,7 +29,7 @@ public class RemoteControlBluetooth implements Runnable {
 
             while(true) {
             	conn = server.acceptAndOpen();
-                System.out.println("Client Connected...");
+                System.out.println("Client Connected through Bluetooth");
 
                 if (!this.client.isConnected()) {
                 	this.client.bind(conn);
