@@ -58,11 +58,12 @@ public class WorkerRunnable implements Runnable {
             } catch (AWTException e) {
             	e.printStackTrace();
             }
-
             client.disconnect();
+            System.out.println("Client disconnected");
         } catch (IOException e) {
         	try {
         		client.disconnect();
+        		System.out.println("Client disconnected");
         	} catch (IOException ex) {
         		System.out.println("Cannot disconnect client. " + ex.getMessage());
         	}
